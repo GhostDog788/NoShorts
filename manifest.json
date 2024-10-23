@@ -10,7 +10,10 @@
     "content_scripts": [
       {
         "matches": ["https://*.youtube.com/*"],
-        "js": ["contentScript.js"]
+        "js": [
+          "code/removeElements.js",
+          "code/main.js"
+        ]
       }
     ],
     "icons": {

@@ -41,17 +41,3 @@ function removeShortsAll() {
     removeShortsLinks();
     removeShortsVideos();
 }
-
-// Run the function when the page is loaded
-window.addEventListener('load', removeShortsAll);
-
-// Observe for dynamically loaded content that might include new <a> tags
-const observer = new MutationObserver(() => {
-    removeShortsAll();
-});
-
-// Observe changes to the body element to catch dynamic content loading
-observer.observe(document.body, {
-    childList: true,
-    subtree: true,
-});
